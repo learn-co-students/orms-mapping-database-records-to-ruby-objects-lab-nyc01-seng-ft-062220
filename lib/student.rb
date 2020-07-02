@@ -75,6 +75,7 @@ class Student
     SQL
 
     #? when do i need to use `.first`
+    # when limit is greater than 1
     DB[:conn].execute(sql).map { |student_row| self.new_from_db(student_row) }.first
   end
   
